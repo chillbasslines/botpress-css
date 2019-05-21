@@ -27,11 +27,13 @@ a {
 .bpw-from-user .bpw-chat-bubble  {
   background-color: #419ef9;
   color: #FFF;
+  font-family: 'Poppins';
 }
 
 .bpw-from-bot .bpw-chat-bubble {
   background-color: #FFF;
   color: #333;
+  font-family: 'Poppins';
 }
 
 .bpw-chat-bubble  {
