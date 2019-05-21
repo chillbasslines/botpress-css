@@ -10,6 +10,7 @@ a {
 
 .bpw-widget-btn {
   background-color: #419ef9;
+  border-radius: 12px 3px 12px 12px;
 }
 
 .bpw-header-name {
@@ -29,6 +30,7 @@ a {
   color: #FFF;
   font-size: 11pt;
   font-family: 'Poppins', sans-serif;
+  border-radius: 10px 0px 10px 10px;
 }
 
 .bpw-from-bot .bpw-chat-bubble {
@@ -36,10 +38,7 @@ a {
   color: #333;
   font-size: 11pt;
   font-family: 'Poppins', sans-serif;
-}
-
-.bpw-chat-bubble  {
-  border-radius: 5px  !important;
+  border-radius: 0px 10px 10px 10px;
 }
 
 .bpw-composer  {
