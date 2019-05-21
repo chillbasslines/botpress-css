@@ -6,6 +6,10 @@
 .botpress__side-external .botpress__side-internal .botpress__side-header {
   border-bottom: 2px solid #fff;
 }
+
+.bpw-from-bot .bpw-chat-bubble {
+  color: #AAA;
+}
  
 .botpress__side-header-bot-name,
 .botpress__message-date,
