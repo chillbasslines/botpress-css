@@ -4,16 +4,36 @@
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
+.bpw-header-name {
+  color: #333;
+}
+
+.bpw-chat-container {
+  background-color: #efefef;
+}
+
+.bpw-date-container {
+  color: #9a9a9a;
+}
+
 .bpw-from-user .bpw-chat-bubble  {
-  background-color: #3385ff;
+  background-color: #4747ad;
   color: #FFF;
 }
 
 .bpw-from-bot .bpw-chat-bubble {
   background-color: #FFF;
-  color: #444;
+  color: #333;
 }
 
 .bpw-chat-bubble  {
-  border-radius: 10px  !important;
+  border-radius: 5px  !important;
+}
+
+.bpw-composer  {
+  border-top-color: #333;
+}
+
+.bpw-composer textarea  {
+  color: #333;
 }
