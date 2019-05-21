@@ -4,12 +4,16 @@
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
+a {
+  color: #e14eca;
+}
+
 .bpw-header-name {
   color: #333;
 }
 
 .bpw-chat-container {
-  background-color: #efefef;
+  background-color: #fafafa;
 }
 
 .bpw-date-container {
@@ -17,7 +21,7 @@
 }
 
 .bpw-from-user .bpw-chat-bubble  {
-  background-color: #4747ad;
+  background-color: #419ef9;
   color: #FFF;
 }
 
