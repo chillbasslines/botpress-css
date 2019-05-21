@@ -23,14 +23,14 @@ a {
 .bpw-from-user .bpw-chat-bubble  {
   background-color: #419ef9;
   color: #FFF;
-  font-size: 11px;
+  font-size: 11pt;
   font-family: 'Poppins', sans-serif;
 }
 
 .bpw-from-bot .bpw-chat-bubble {
   background-color: #FFF;
   color: #333;
-  font-size: 11px;
+  font-size: 11pt;
   font-family: 'Poppins', sans-serif;
 }
 
