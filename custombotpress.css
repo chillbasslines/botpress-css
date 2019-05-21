@@ -10,7 +10,6 @@ a {
 
 .bpw-widget-btn {
   background-color: #419ef9;
-  border-radius: 12px 3px 12px 12px;
 }
 
 .bpw-header-name {
@@ -41,6 +40,6 @@ a {
   border-radius: 0px 10px 10px 10px;
 }
 
-.bpw-composer  {
-  border-top-color: #333;
+.bpw-composer textarea{
+  margin-bottom: 0;
 }
