@@ -90,7 +90,12 @@ a {
 
 .css-xwjg1b {
   background-color: #419ef9;
-  font-size: 50% !important;
+  font-size: 70% !important;
+  color: #fff !important;
+  border-radius: 10px;
+}
+
+.css-12jo7m5 {
   color: #fff !important;
 }
 
