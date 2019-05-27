@@ -45,6 +45,7 @@ a {
 
 .bpw-from-user .bpw-chat-bubble  {
   background-color: #419ef9;
+  border-color: #419ef9;
   color: #FFF;
   font-size: 11pt;
   font-family: 'Poppins', sans-serif;
@@ -52,7 +53,8 @@ a {
 }
 
 .bpw-from-bot .bpw-chat-bubble {
-  background-color: #fafafa;
+  background-color: #fff;
+  border-color: #ddd;
   color: #333;
   font-size: 11pt;
   font-family: 'Poppins', sans-serif;
