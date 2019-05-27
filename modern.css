@@ -61,7 +61,7 @@ a {
 }
 
 .bpw-from-bot .bpw-chat-bubble {
-  background-color: #eee;
+  background-color: #fcfcfc;
   border-color: #ddd;
   color: #333;
   font-size: 11pt;
@@ -90,7 +90,8 @@ a {
 
 .css-xwjg1b {
   background-color: #419ef9;
-  color: #fff;
+  font-size: 50% !important;
+  color: #fff !important;
 }
 
 .bpw-composer textarea{
