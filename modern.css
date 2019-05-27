@@ -17,7 +17,7 @@ a {
 }
 
 .bpw-chat-container {
-  background-color: #fafafa;
+  background-color: #fff;
 }
 
 .bpw-date-container {
@@ -33,7 +33,7 @@ a {
 }
 
 .bpw-from-bot .bpw-chat-bubble {
-  background-color: #FFF;
+  background-color: #fafafa;
   color: #333;
   font-size: 11pt;
   font-family: 'Poppins', sans-serif;
