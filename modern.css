@@ -40,6 +40,12 @@ a {
   border-radius: 0px 10px 10px 10px;
 }
 
+.bpw-button {
+  border-radius: 10px;
+  border-color: #419ef9;
+  color: #419ef9; 
+}
+
 .bpw-composer textarea{
   margin-bottom: 0;
 }
