@@ -48,7 +48,11 @@ a {
 }
 
 .bpw-date-container {
-  color: #9a9a9a;
+  color: #99aa9a;
+}
+
+.bpw-small-line {
+  color: #99aa9a;
 }
 
 .bpw-from-user .bpw-chat-bubble  {
