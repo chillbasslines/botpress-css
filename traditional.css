@@ -1,0 +1,45 @@
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+}
+
+a {
+  color: #00f2c3;
+}
+
+.bpw-widget-btn {
+  background-color: #419ef9;
+}
+
+.bpw-header-name {
+  color: #333;
+}
+
+.bpw-chat-container {
+  background-color: #fafafa;
+}
+
+.bpw-date-container {
+  color: #9a9a9a;
+}
+
+.bpw-from-user .bpw-chat-bubble  {
+  background-color: #419ef9;
+  color: #FFF;
+  font-size: 11pt;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 10px 0px 10px 10px;
+}
+
+.bpw-from-bot .bpw-chat-bubble {
+  background-color: #FFF;
+  color: #333;
+  font-size: 11pt;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 0px 10px 10px 10px;
+}
+
+.bpw-composer textarea{
+  margin-bottom: 0;
+}
