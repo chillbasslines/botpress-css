@@ -27,6 +27,10 @@ a {
   color: #00f2c3;
 }
 
+.bp-widget-side {
+  width: 400px;
+}
+
 .bpw-widget-btn {
   background-color: #419ef9;
 }
