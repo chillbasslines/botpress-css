@@ -35,6 +35,10 @@ a {
   color: #333;
 }
 
+.bpw-header-container {
+  font-family: 'Poppins', sans-serif;
+}
+
 .bpw-chat-container {
   background-color: #fff;
 }
@@ -64,7 +68,20 @@ a {
 .bpw-button {
   border-radius: 10px;
   border-color: #419ef9;
+  font-family: 'Poppins', sans-serif;
   color: #419ef9; 
+}
+
+.bpw-bubble-session_reset {
+  border-color: red !important;
+}
+
+.bpw-keyboard-quick_reply {
+  font-family: 'Poppins', sans-serif;
+}
+
+.bpw-composer {
+  font-family: 'Poppins', sans-serif;
 }
 
 .css-xwjg1b {
