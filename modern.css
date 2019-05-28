@@ -133,7 +133,8 @@ a {
     transform: scale(2.5);
   }
   .bpw-header-icon {
-    width: 50px;
+    width: 30px;
+    height: 30px;
   }
   .bpw-bot-avatar img, .bpw-bot-avatar svg {
     height: 75px;
