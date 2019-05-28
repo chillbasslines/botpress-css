@@ -59,7 +59,7 @@ a {
   background-color: #419ef9;
   border-color: #419ef9;
   color: #FFF;
-  font-size: 4vw;
+  font-size: 12px;
   font-family: 'Poppins', sans-serif;
   border-radius: 10px 0px 10px 10px;
 }
@@ -68,7 +68,7 @@ a {
   background-color: #fcfcfc;
   border-color: #ddd;
   color: #333;
-  font-size: 4vw;
+  font-size: 12px;
   font-family: 'Poppins', sans-serif;
   border-radius: 0px 10px 10px 10px;
 }
@@ -105,4 +105,13 @@ a {
 
 .bpw-composer textarea{
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .bpw-from-bot .bpw-chat-bubble {
+    font-size: 25px;
+  }
+  .bpw-from-user .bpw-chat-bubble {
+    font-size: 25px;
+  }
 }
