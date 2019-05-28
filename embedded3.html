@@ -28,9 +28,6 @@
         botConvoDescription: 'Grab your favorite yacht',
         extraStylesheet: 'https://chillbasslines.github.io/botpress-css/modern.css'
       })
-    };
-
-    window.onload = () => {
       let rand = Math.floor(Math.random() * 100000000);
       const brokerageId = '5cec7d5435bb0200174811f4';
       window.botpressWebChat.sendEvent({
@@ -39,6 +36,7 @@
         brokerage: brokerageId
       })
     };
+
   </script>
 
 </html>
