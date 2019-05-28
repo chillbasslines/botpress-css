@@ -108,13 +108,19 @@ a {
 }
 
 @media only screen and (max-device-width : 900px) {
-  .bpw-chat-container {
-    font-size: 125%;
+  .bpw-from-bot .bpw-chat-bubble {
+    font-size: 20px;
+  }
+  .bpw-from-user .bpw-chat-bubble {
+    font-size: 20px;
   }
 }
 
 @media only screen and (max-device-width : 640px) {
-  .bpw-chat-container {
-    font-size: 300%;
+  .bpw-from-bot .bpw-chat-bubble {
+    font-size: 25px;
+  }
+  .bpw-from-user .bpw-chat-bubble {
+    font-size: 25px;
   }
 }
