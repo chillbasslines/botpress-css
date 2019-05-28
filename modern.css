@@ -136,6 +136,9 @@ a {
     width: 30px;
     height: 30px;
   }
+  .bpw-header-icon-close {
+    margin-right: 15px;
+  }
   .bpw-bot-avatar img, .bpw-bot-avatar svg {
     height: 75px;
     width: 75px;
