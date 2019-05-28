@@ -114,13 +114,31 @@ a {
   .bpw-from-user .bpw-chat-bubble {
     font-size: 20px;
   }
+  .bpw-button {
+    font-size: 20px;
+  }
+  .bpw-composer-inner {
+    font-size: 20px;
+  }
+  .bpw-send-button {
+    font-size: 17px;
+  }
 }
 
 @media only screen and (max-device-width : 640px) {
   .bpw-from-bot .bpw-chat-bubble {
-    font-size: 25px;
+    font-size: 35px;
   }
   .bpw-from-user .bpw-chat-bubble {
-    font-size: 25px;
+    font-size: 35px;
+  }
+  .bpw-button {
+    font-size: 35px;
+  }
+  .bpw-composer-inner {
+    font-size: 35px;
+  }
+  .bpw-send-button {
+    font-size: 30px;
   }
 }
