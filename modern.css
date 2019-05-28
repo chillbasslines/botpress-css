@@ -126,6 +126,9 @@ a {
 }
 
 @media only screen and (max-device-width : 640px) {
+  .bpw-widget-btn i svg {
+    transform: scale(2);
+  }
   .bpw-header-icon i svg{
     transform: scale(2);
   }
