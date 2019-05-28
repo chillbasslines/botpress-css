@@ -126,7 +126,7 @@ a {
 }
 
 @media only screen and (max-device-width : 640px) {
-  .bpw-widget-btn i svg {
+  .bpw-widget-btn .bpw-floating-button .bpw-anim-null i svg {
     transform: scale(2);
   }
   .bpw-header-icon i svg{
