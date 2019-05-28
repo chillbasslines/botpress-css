@@ -14,9 +14,11 @@
       host: 'https://tightropechat.herokuapp.com',
       botId: 'learning',
     }) 
+
+    window.onload = function(){
     let rand = Math.floor(Math.random() * 100000000);
     const brokerageId = '5cec7d5435bb0200174811f4';
-    window.onload = function(){window.botpressWebChat.sendEvent({
+    window.botpressWebChat.sendEvent({
       type: 'set-brokerage',
       channel: 'web',
       brokerage: brokerageId
