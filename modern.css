@@ -129,6 +129,9 @@ a {
   svg[Attributes Style] {
     height: 25;
   }
+  .bpw-header-container {
+    height: 90px;
+  }
   .bpw-header-name {
     font-size: 40px;
   }
