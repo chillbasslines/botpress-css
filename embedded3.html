@@ -16,13 +16,15 @@
     }) 
 
     window.onload = () => {
-    let rand = Math.floor(Math.random() * 100000000);
-    const brokerageId = '5cec7d5435bb0200174811f4';
-    window.botpressWebChat.sendEvent({
-      type: 'set-brokerage',
-      channel: 'web',
-      brokerage: brokerageId
-    })
+      let rand = Math.floor(Math.random() * 100000000);
+      const brokerageId = '5cec7d5435bb0200174811f4';
+      window.botpressWebChat.sendEvent({
+        type: 'set-brokerage',
+        channel: 'web',
+        brokerage: brokerageId
+      })
+    };
+
     window.addEventListener('message', message => {
       let id = message.data.userId;
       if(id.substr(id.length - 6) !== brokerageId.substr(brokerageId.length - 6)) {
@@ -35,8 +37,7 @@
           userId: rand + brokerageId.substr(brokerageId.length - 6)
         })
       }
-    })};
-
+    })
   </script>
 
 </html>
