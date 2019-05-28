@@ -130,7 +130,10 @@ a {
     transform: scale(2);
   }
   .bpw-header-icon i svg{
-    transform: scale(2);
+    transform: scale(2.5);
+  }
+  .bpw-header-icon {
+    width: 50px;
   }
   .bpw-bot-avatar img, .bpw-bot-avatar svg {
     height: 75px;
