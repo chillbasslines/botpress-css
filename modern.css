@@ -115,6 +115,6 @@ a {
 
 @media only screen and (max-device-width : 640px) {
   .bpw-chat-container {
-    font-size: 175%;
+    font-size: 300%;
   }
 }
