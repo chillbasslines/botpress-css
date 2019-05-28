@@ -126,15 +126,15 @@ a {
 }
 
 @media only screen and (max-device-width : 640px) {
-  .bpw-header-icon {
-    height: 80;
+  .bpw-header-icon i svg{
+    transform: scale(2);
   }
   .bpw-bot-avatar img, .bpw-bot-avatar svg {
     height: 75px;
     width: 75px;
   }
   .bpw-header-container {
-    height: 90px;
+    height: 100px;
   }
   .bpw-header-name {
     font-size: 40px;
@@ -157,6 +157,6 @@ a {
     height: 90px;
   }
   .bpw-send-button {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
