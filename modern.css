@@ -59,7 +59,7 @@ a {
   background-color: #419ef9;
   border-color: #419ef9;
   color: #FFF;
-  font-size: 12px;
+  font-size: 15px;
   font-family: 'Poppins', sans-serif;
   border-radius: 10px 0px 10px 10px;
 }
@@ -68,7 +68,7 @@ a {
   background-color: #fcfcfc;
   border-color: #ddd;
   color: #333;
-  font-size: 12px;
+  font-size: 15px;
   font-family: 'Poppins', sans-serif;
   border-radius: 0px 10px 10px 10px;
 }
@@ -107,11 +107,14 @@ a {
   margin-bottom: 0;
 }
 
-@media only screen and (max-device-width : 640px) {
-  .bpw-from-bot .bpw-chat-bubble {
-    font-size: 25px;
+@media only screen and (max-device-width : 900px) {
+  .bpw-chat-container {
+    font-size: 125%;
   }
-  .bpw-from-user .bpw-chat-bubble {
-    font-size: 25px;
+}
+
+@media only screen and (max-device-width : 640px) {
+  .bpw-chat-container {
+    font-size: 175%;
   }
 }
