@@ -92,6 +92,10 @@ a {
   font-family: 'Poppins', sans-serif;
 }
 
+div:has(> .css-10nd86i) {
+  width: 100%;
+}
+
 .css-xwjg1b {
   background-color: #419ef9;
   font-size: 70% !important;
