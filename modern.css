@@ -134,8 +134,9 @@ a {
   }
   .bpw-button {
     font-size: 35px;
+    height: 80px;
   }
-  .bpw-composer-inner {
+  .bpw-composer-inner textarea{
     font-size: 35px;
   }
   .bpw-send-button {
