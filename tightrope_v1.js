@@ -20,12 +20,12 @@ window.addEventListener('message', function(payload) {
 function init(config) {
   const host = config.host || ''
   const botId = config.botId || ''
-  const brokerId = config.brokerageId || ''
+  const brokerageId = config.brokerageId || ''
   const cssHref = host + '/assets/modules/channel-web/inject.css'
   injectDOMElement('link', 'head', { rel: 'stylesheet', href: cssHref })
 
   const options = encodeURIComponent(JSON.stringify({ config: config }))
-  const iframeSrc = host + '/lite/' + botId + '/?m=channel-web&v=Embedded' + '&ref=' + brokerId + '&options=' + options
+  const iframeSrc = host + '/lite/' + botId + '/?m=channel-web&v=Embedded' + '&ref=' + brokerageId + '&options=' + options
   const iframeHTML = '<iframe id="bp-widget" frameborder="0" src="' + iframeSrc + '" class="bp-widget-web"/>'
   injectDOMElement('div', 'body', { id: 'bp-web-widget', innerHTML: iframeHTML })
 
