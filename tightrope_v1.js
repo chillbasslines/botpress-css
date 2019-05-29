@@ -1,29 +1,46 @@
-  window.botpressWebChat.init({
-    host: 'https://tightropechat.herokuapp.com',
-    botName: 'TightropeBot',
-    botConvoDescription: 'Is Tightrope right for you?',
-    botId: 'learning',
-    enableReset: true,
-    showConversationsButton: false,
-    extraStylesheet: 'https://chillbasslines.github.io/botpress-css/modern.css'
-  }) 
-  let rand = Math.floor(Math.random() * 100000000);
-  const brokerageId = '5cec7d5435bb0200174811f4';
-  setTimeout(function(){window.botpressWebChat.sendEvent({
-    type: 'set-brokerage',
-    channel: 'web',
-    brokerage: brokerageId
-  })}, 2000);
-  window.addEventListener('message', message => {
-    let id = message.data.userId;
-    if(id.substr(id.length - 6) !== brokerageId.substr(brokerageId.length - 6)) {
-      window.botpressWebChat.configure({
-        host: 'http://localhost:3000',
-        botName: 'Yacht Bot 2',
-        botConvoDescription: 'Grab your favorite yacht',
-        botId: 'learning',
-        extraStylesheet: 'https://chillbasslines.github.io/botpress-css/modern.css',
-        userId: rand + brokerageId.substr(brokerageId.length - 6)
-      })
-    }
-  })
+function injectDOMElement(tagName, targetSelector, options) {
+  const element = document.createElement(tagName)
+  if (options) {
+    Object.keys(options).forEach(function(key) {
+      element[key] = options[key]
+    })
+  }
+  document.querySelector(targetSelector).appendChild(element)
+  return element
+}
+
+window.addEventListener('message', function(payload) {
+  const data = payload.data
+  if (!data || !data.type || data.type !== 'setClass') {
+    return
+  }
+  document.querySelector('#bp-widget').setAttribute('class', data.value)
+})
+
+function init(config) {
+  const host = config.host || ''
+  const botId = config.botId || ''
+  const brokerId = config.brokerageId || ''
+  const cssHref = host + '/assets/modules/channel-web/inject.css'
+  injectDOMElement('link', 'head', { rel: 'stylesheet', href: cssHref })
+
+  const options = encodeURIComponent(JSON.stringify({ config: config }))
+  const iframeSrc = host + '/lite/' + botId + '/?m=channel-web&v=Embedded' + '&ref=' + brokerId + '&options=' + options
+  const iframeHTML = '<iframe id="bp-widget" frameborder="0" src="' + iframeSrc + '" class="bp-widget-web"/>'
+  injectDOMElement('div', 'body', { id: 'bp-web-widget', innerHTML: iframeHTML })
+
+  const iframeWindow = document.querySelector('#bp-web-widget > #bp-widget').contentWindow
+  function configure(payload) {
+    iframeWindow.postMessage({ action: 'configure', payload: payload }, '*')
+  }
+  function sendEvent(payload) {
+    iframeWindow.postMessage({ action: 'event', payload: payload }, '*')
+  }
+
+  window.botpressWebChat.configure = configure
+  window.botpressWebChat.sendEvent = sendEvent
+}
+
+// Do we want to expose 'onPostback'
+// Or do we let it as is (window listens on message) ?
+window.botpressWebChat = { init: init }

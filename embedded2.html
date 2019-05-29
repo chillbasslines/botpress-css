@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Embedded Webchat</title>
-    <script src="https://tightropechat.herokuapp.com/assets/modules/channel-web/inject.js"></script>
+    <script src="tightrope_v1.js"></script>
   </head>
 
   <body>
@@ -10,6 +10,10 @@
 
 
   <script>
+    const brokerageId = '5ce5d0ac9debbe001785f5b3';
+
+    async function initializeBot() {
+    return
     window.botpressWebChat.init({
       host: 'https://tightropechat.herokuapp.com',
       botName: 'TightropeBot',
@@ -18,30 +22,25 @@
       enableReset: false,
       showConversationsButton: false,
       extraStylesheet: 'https://chillbasslines.github.io/botpress-css/modern.css'
-    }) 
-  </script>
+    })}; 
 
-  <script>
-    let rand = Math.floor(Math.random() * 100000000);
-    const brokerageId = '5ce5d0ac9debbe001785f5b3';
-    setTimeout(function(){window.botpressWebChat.sendEvent({
+    async function setBrokerage() {window.botpressWebChat.sendEvent({
       type: 'set-brokerage',
       channel: 'web',
       brokerage: brokerageId
-    })}, 2000);
+    })};
+
+    let rand = Math.floor(Math.random() * 100000000);
+
     window.addEventListener('message', message => {
-      let id = message.data.userId;
-      if(id.substr(id.length - 6) !== brokerageId.substr(brokerageId.length - 6)) {
-        window.botpressWebChat.configure({
-          host: 'https://tightropechat.herokuapp.com',
-          botName: 'TightropeBot',
-          botConvoDescription: 'Is Tightrope right for you?',
-          botId: 'learning',
-          enableReset: false,
-          showConversationsButton: false,
-          extraStylesheet: 'https://chillbasslines.github.io/botpress-css/modern.css',
-          userId: rand + brokerageId.substr(brokerageId.length - 6)
-        })
+      const brokerageId = '5ce5d0ac9debbe001785f5b3';
+      if (typeof message.data.userId !== 'undefined') {
+        let id = message.data.userId;
+        if(id.substr(id.length - 6) !== brokerageId.substr(brokerageId.length - 6)) {
+          window.botpressWebChat.configure({
+            userId: rand + brokerageId.substr(brokerageId.length - 6)
+          })
+        }
       }
     })
   </script>
