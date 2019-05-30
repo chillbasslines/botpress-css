@@ -17,6 +17,16 @@ window.addEventListener('message', function(payload) {
   document.querySelector('#bp-widget').setAttribute('class', data.value)
 })
 
+function setBrokerageId(brokerageId) {
+  sendEvent({
+    type: 'set-brokerage',
+    channel: 'web',
+    payload: {
+      brokerage: brokerageId
+    }
+  })
+}
+
 function init(config) {
   const host = config.host || ''
   const botId = config.botId || ''
@@ -25,7 +35,7 @@ function init(config) {
   injectDOMElement('link', 'head', { rel: 'stylesheet', href: cssHref })
 
   const options = encodeURIComponent(JSON.stringify({ config: config }))
-  const iframeSrc = host + '/lite/' + botId + '/?m=channel-web&v=Embedded' + '&ref=' + brokerageId + '&options=' + options
+  const iframeSrc = host + '/lite/' + botId + '/?m=channel-web&v=Embedded&options=' + options
   const iframeHTML = '<iframe id="bp-widget" frameborder="0" src="' + iframeSrc + '" class="bp-widget-web"/>'
   injectDOMElement('div', 'body', { id: 'bp-web-widget', innerHTML: iframeHTML })
 
@@ -39,6 +49,27 @@ function init(config) {
 
   window.botpressWebChat.configure = configure
   window.botpressWebChat.sendEvent = sendEvent
+
+  window.addEventListener('message', message => {
+    if (message.data.userId) {
+      const userId = message.data.userId;
+      const preId = userId.substr(0,21);
+      const postId = userId.slice(-brokerageId.length);
+      if(postId !== brokerageId) {
+        config.userId = preId + brokerageId;
+        configure(config)
+      }
+    }
+  })
+
+  setTimeout(function(){sendEvent({
+    type: 'set-brokerage',
+    channel: 'web',
+    payload: {
+      brokerage: brokerageId
+    }
+  })
+ }, 3000);
 }
 
 // Do we want to expose 'onPostback'
