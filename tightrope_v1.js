@@ -31,7 +31,7 @@ function init(config) {
   const host = config.host || 'https://tightropechat.herokuapp.com'
   const botId = config.botId || 'learning'
   const brokerageId = config.brokerageId || ''
-  config.extraStylesheet = config.extratylesheet || 'https://chillbasslines.github.io/botpress-css/modern.css'
+  config.extraStylesheet = config.extraStylesheet || 'https://chillbasslines.github.io/botpress-css/modern.css'
   const cssHref = host + '/assets/modules/channel-web/inject.css'
   injectDOMElement('link', 'head', { rel: 'stylesheet', href: cssHref })
 
